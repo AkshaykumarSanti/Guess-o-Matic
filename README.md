@@ -1,6 +1,6 @@
 # 🎯 Guess The Number (If You Can 😏)
 
-Welcome to a tiny but ego-challenging Python game where your mission is simple:
+Welcome to a tiny but ego-challenging Python game where your mission is simple
 
 👉 Guess the secret number between **1 and 100** 🎲
 
