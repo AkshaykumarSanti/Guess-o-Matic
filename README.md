@@ -66,7 +66,7 @@ This project was built to:
 
 ---
 
-# ✨ Sample Responses
+# ✨ Sample Response
 
 ```text
 🔺 Higher Number Please
