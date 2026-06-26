@@ -1,12 +1,4 @@
-/* ===========================
-   Guess-O-Mania
-   Phase 2 - UI Design
-=========================== */
-
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* Reset */
 
 *{
     margin:0;
@@ -14,90 +6,31 @@
     box-sizing:border-box;
 }
 
+/* Body */
+
 body{
+
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-    background-size:300% 300%;
-    animation:bgMove 10s ease infinite;
-    min-height:100vh;
+
+    background:#b6d5ff;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
-    color:white;
+
+    min-height:100vh;
+
     padding:20px;
-}
-
-/* Background Animation */
-
-@keyframes bgMove{
-
-    0%{
-        background-position:left;
-    }
-
-    50%{
-        background-position:right;
-    }
-
-    100%{
-        background-position:left;
-    }
 
 }
 
 /* Main Container */
 
 .container{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-/* Glass Card */
-
-.game-card{
 
     width:100%;
-    max-width:650px;
-
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.2);
-
-    border-radius:20px;
-
-    padding:35px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-
-    animation:fadeUp .8s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-/* Logo */
-
-.logo{
 
     display:flex;
 
@@ -105,45 +38,57 @@ body{
 
     align-items:center;
 
-    gap:12px;
+}
 
-    margin-bottom:15px;
+/* Game Card */
+
+.game-box{
+
+    width:100%;
+
+    max-width:550px;
+
+    background:#ffffff;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
 
 }
 
-.logo i{
+/* Heading */
 
-    font-size:38px;
-
-    color:#ffd43b;
-
-}
-
-.logo h1{
-
-    font-size:34px;
-
-    font-weight:700;
-
-}
-
-/* Tagline */
-
-.tagline{
+.game-box h1{
 
     text-align:center;
 
-    color:#dbeafe;
+    color:#2563eb;
 
-    margin-bottom:30px;
+    margin-bottom:12px;
+
+    font-size:34px;
+
+}
+
+/* Description */
+
+.description{
+
+    text-align:center;
+
+    color:#555;
 
     line-height:1.6;
+
+    margin-bottom:30px;
 
 }
 
 /* Statistics */
 
-.stats{
+.game-info{
 
     display:grid;
 
@@ -155,53 +100,37 @@ body{
 
 }
 
-.card{
+.info-box{
 
-    background:rgba(255,255,255,.08);
+    background:#f8fafc;
 
-    border-radius:15px;
+    border:1px solid #e5e7eb;
+
+    border-radius:10px;
 
     padding:18px;
 
     text-align:center;
 
-    transition:.3s;
-
 }
 
-.card:hover{
-
-    transform:translateY(-5px);
-
-    background:rgba(255,255,255,.15);
-
-}
-
-.card i{
-
-    font-size:22px;
-
-    color:#60a5fa;
-
-    margin-bottom:8px;
-
-}
-
-.card h3{
+.info-box h3{
 
     font-size:15px;
 
-    margin-bottom:8px;
+    color:#555;
 
-    font-weight:500;
+    margin-bottom:10px;
 
 }
 
-.card span{
+.info-box p{
 
-    font-size:22px;
+    color:#2563eb;
 
-    font-weight:700;
+    font-size:24px;
+
+    font-weight:600;
 
 }
 
@@ -209,7 +138,7 @@ body{
 
 .difficulty{
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
@@ -229,47 +158,41 @@ body{
 
     padding:12px;
 
-    border:none;
+    border:1px solid #d1d5db;
 
-    border-radius:10px;
+    border-radius:8px;
 
-    outline:none;
+    font-size:15px;
 
-    font-size:16px;
-
-    font-family:'Poppins',sans-serif;
+    background:white;
 
 }
 
 /* Input */
 
-.guess-box{
-
-    margin-bottom:25px;
-
-}
-
-.guess-box input{
+#guess-input{
 
     width:100%;
 
     padding:14px;
 
-    font-size:18px;
+    font-size:16px;
 
-    border:none;
+    border:1px solid #d1d5db;
 
-    border-radius:12px;
+    border-radius:8px;
 
-    outline:none;
-
-    transition:.3s;
+    margin-bottom:20px;
 
 }
 
-.guess-box input:focus{
+#guess-input:focus{
 
-    box-shadow:0 0 12px #60a5fa;
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 5px rgba(37,99,235,.25);
 
 }
 
@@ -283,17 +206,15 @@ button{
 
     border:none;
 
-    border-radius:12px;
+    border-radius:8px;
 
     cursor:pointer;
 
-    font-size:17px;
+    font-size:16px;
 
-    font-weight:600;
+    font-weight:500;
 
-    transition:.3s;
-
-    font-family:'Poppins',sans-serif;
+    transition:0.2s;
 
 }
 
@@ -313,37 +234,25 @@ button{
 
     background:#1d4ed8;
 
-    transform:translateY(-3px);
-
 }
 
 /* Message */
 
-.message{
+#message{
 
-    display:flex;
+    background:#f8fafc;
 
-    align-items:center;
+    border:1px solid #e5e7eb;
 
-    justify-content:center;
-
-    gap:10px;
-
-    background:rgba(255,255,255,.08);
+    border-radius:8px;
 
     padding:15px;
 
-    border-radius:12px;
+    text-align:center;
 
     margin-bottom:20px;
 
-    text-align:center;
-
-}
-
-.message i{
-
-    color:#facc15;
+    color:#444;
 
 }
 
@@ -351,7 +260,7 @@ button{
 
 #restart-btn{
 
-    background:#22c55e;
+    background:#16a34a;
 
     color:white;
 
@@ -359,65 +268,43 @@ button{
 
 #restart-btn:hover{
 
-    background:#16a34a;
+    background:#15803d;
 
-    transform:translateY(-3px);
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
 
 }
 
 /* Responsive */
 
-@media(max-width:768px){
+@media(max-width:600px){
 
-    .game-card{
+    .game-box{
 
         padding:25px;
 
     }
 
-    .stats{
+    .game-info{
 
         grid-template-columns:1fr;
 
     }
 
-    .logo h1{
+    .game-box h1{
 
         font-size:28px;
-
-    }
-
-    .logo i{
-
-        font-size:30px;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    body{
-
-        padding:10px;
-
-    }
-
-    .game-card{
-
-        padding:20px;
-
-    }
-
-    button{
-
-        font-size:15px;
-
-    }
-
-    .guess-box input{
-
-        font-size:16px;
 
     }
 
