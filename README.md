@@ -1,89 +1,175 @@
-# 🎯 Guess The Number (If You Can 😏)
+# 🎯 Guess-O-Mania
 
-Welcome to a tiny but ego-challenging Python game where your mission is simple:
+A modern and interactive number guessing game built using **HTML, CSS, and JavaScript**.
 
-👉 Guess the secret number between **1 and 100** 🎲
+Challenge yourself to guess the hidden number, improve your logical thinking, and beat your best score with an engaging and responsive user interface.
 
-Sounds easy?  
-The computer disagrees. 🤖
-
-Every guess brings you closer to victory… or embarrassment 😂
+> 🚧 This project is currently under active development. New features will be added in each phase.
 
 ---
 
-# 🚀 Game Features
+## 📸 Preview
 
-✅ Random number generation between 1–100  
-🔺 Smart hints: *Higher Number Please*  
-🔻 Smart hints: *Lower Number Please*  
-🎯 Tracks total number of attempts  
-⌨️ Supports **Enter key** for quick gameplay  
-🎨 Color-coded feedback messages  
-⚠️ Handles invalid inputs gracefully  
-🛑 Disables guessing after winning  
+> UI Preview coming soon...
 
 ---
 
-# 🖥️ Built With
+## ✨ Features (Phase 1)
 
-- 🐍 Python
-- 🖼️ Tkinter (GUI Library)
-- 🎲 Random Module
-
----
-
-# 🧠 Concepts Practiced
-
-🎯 Object-Oriented Programming (OOP)  
-⚡ Event Handling  
-🖥️ GUI Development using Tkinter  
-🔄 Conditional Logic & Loops  
-🎨 User Interaction Design  
+- 🎨 Modern Glassmorphism UI
+- 🌈 Animated Gradient Background
+- 📱 Fully Responsive Design
+- 🎯 Difficulty Selection (Easy, Medium, Hard)
+- 📊 Attempts Counter
+- ⏱️ Timer Section
+- 🏆 Best Score Section
+- 🔢 Number Input Field
+- 🎲 Guess Button
+- 🔄 Play Again Button
+- ✨ Smooth Hover Effects
 
 ---
 
-# 🎮 Gameplay
+## 🚀 Upcoming Features
 
-The computer secretly selects a number.
-
-You keep guessing until:
-- 📈 It's higher
-- 📉 It's lower
-- ✅ Or you finally get it right
-
-Once you win, the game proudly tells you how many attempts it took to achieve greatness 😎
-
----
-
-# 🎯 Purpose of This Project
-
-This project was built to:
-- Practice Python GUI development
-- Strengthen OOP concepts
-- Improve logical thinking
-- Learn event-driven programming
-- Create a fun interactive desktop application
+- 🎯 Random Number Generation
+- 🔺 Higher / Lower Hints
+- ✅ Win Detection
+- 📈 Attempt Tracking
+- ⌨️ Enter Key Support
+- ⏱️ Live Timer
+- 💾 High Score using Local Storage
+- 🎉 Confetti Animation
+- 🔊 Sound Effects
+- 📊 Game Statistics
+- 🌙 Dark Theme Improvements
 
 ---
 
-# ✨ Sample Response
+## 🛠️ Tech Stack
 
-```text
-🔺 Higher Number Please
-🔻 Lower Number Please
-✅ Correct! Found in 7 attempts.
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+
+### Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+Guess-o-Matic
+│
+├── python_version/
+│   └── main.py
+│
+├── web_version/
+│   ├── assets/
+│   │   ├── icons/
+│   │   ├── images/
+│   │   └── sounds/
+│   │
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-# 👨‍💻 Author
+## 🎯 Project Goals
 
-### Akshaykumar Santi
-🚀 Passionate about Python, GUI Applications & Software Development
+This project is being developed to strengthen practical skills in:
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Web Design
+- DOM Manipulation
+- Browser APIs
+- Local Storage
+- UI/UX Design
+- Git & GitHub
 
 ---
 
-# ⭐ Fun Fact
+## 📅 Development Progress
 
-The computer already knows the number.  
-The real challenge is whether *you* do 😏
+- ✅ Phase 1 — Modern Responsive UI
+- ⏳ Phase 2 — Core Game Logic
+- ⏳ Phase 3 — Difficulty Levels & Timer
+- ⏳ Phase 4 — High Score & Local Storage
+- ⏳ Phase 5 — Animations & Sound Effects
+- ⏳ Phase 6 — Documentation & Deployment
+
+---
+
+## 💻 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AkshaykumarSanti/Guess-o-Matic.git
+```
+
+Open the project:
+
+```bash
+cd Guess-o-Matic/web_version
+```
+
+Run the project by opening:
+
+```
+index.html
+```
+
+in your browser.
+
+---
+
+## 📈 Future Enhancements
+
+- Multiple Game Modes
+- Leaderboard
+- Achievement System
+- Theme Customization
+- Accessibility Improvements
+- PWA Support
+
+---
+
+## 👨‍💻 Author
+
+### Akshaykumar Santi
+
+Computer Science & Engineering Graduate
+
+**Skills**
+
+- Python
+- SQL
+- HTML
+- CSS
+- JavaScript
+- NumPy
+
+Passionate about building clean, responsive, and user-friendly web applications while continuously learning modern technologies.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+It motivates me to build more projects and continue improving this repository.
