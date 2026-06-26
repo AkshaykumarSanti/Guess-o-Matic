@@ -1,0 +1,424 @@
+/* ===========================
+   Guess-O-Mania
+   Phase 2 - UI Design
+=========================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    padding:20px;
+}
+
+/* Background Animation */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:left;
+    }
+
+    50%{
+        background-position:right;
+    }
+
+    100%{
+        background-position:left;
+    }
+
+}
+
+/* Main Container */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Card */
+
+.game-card{
+
+    width:100%;
+    max-width:650px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Logo */
+
+.logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+}
+
+.logo i{
+
+    font-size:38px;
+
+    color:#ffd43b;
+
+}
+
+.logo h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* Tagline */
+
+.tagline{
+
+    text-align:center;
+
+    color:#dbeafe;
+
+    margin-bottom:30px;
+
+    line-height:1.6;
+
+}
+
+/* Statistics */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    padding:18px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.card i{
+
+    font-size:22px;
+
+    color:#60a5fa;
+
+    margin-bottom:8px;
+
+}
+
+.card h3{
+
+    font-size:15px;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+.card span{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* Difficulty */
+
+.difficulty{
+
+    margin-bottom:25px;
+
+}
+
+.difficulty label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+.difficulty select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* Input */
+
+.guess-box{
+
+    margin-bottom:25px;
+
+}
+
+.guess-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.guess-box input:focus{
+
+    box-shadow:0 0 12px #60a5fa;
+
+}
+
+/* Buttons */
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* Guess Button */
+
+#guess-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+#guess-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* Message */
+
+.message{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    background:rgba(255,255,255,.08);
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+.message i{
+
+    color:#facc15;
+
+}
+
+/* Restart Button */
+
+#restart-btn{
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+#restart-btn:hover{
+
+    background:#16a34a;
+
+    transform:translateY(-3px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .game-card{
+
+        padding:25px;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .logo h1{
+
+        font-size:28px;
+
+    }
+
+    .logo i{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .game-card{
+
+        padding:20px;
+
+    }
+
+    button{
+
+        font-size:15px;
+
+    }
+
+    .guess-box input{
+
+        font-size:16px;
+
+    }
+
+}

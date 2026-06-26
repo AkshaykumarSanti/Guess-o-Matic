@@ -1,147 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Guess-O-Mania</title>
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <main class="container">
+    <div class="container">
 
-        <section class="game-card">
+        <div class="game-box">
 
-            <div class="logo">
+            <!-- Heading -->
+            <h1>🎯 Guess-O-Mania</h1>
 
-                <i class="fa-solid fa-dice"></i>
-
-                <h1>Guess-O-Mania</h1>
-
-            </div>
-
-            <p class="tagline">
-
-                Challenge your intuition.<br>
-
-                Guess the hidden number and beat your best score.
-
+            <p class="description">
+                Guess the secret number between 1 and 100.
             </p>
 
-            <div class="stats">
+            <!-- Game Information -->
+            <div class="game-info">
 
-                <div class="card">
-
-                    <i class="fa-solid fa-bullseye"></i>
-
+                <div class="info-box">
                     <h3>Attempts</h3>
-
-                    <span id="attempts">0</span>
-
+                    <p id="attempts">0</p>
                 </div>
 
-                <div class="card">
-
-                    <i class="fa-solid fa-clock"></i>
-
-                    <h3>Timer</h3>
-
-                    <span id="timer">00:00</span>
-
-                </div>
-
-                <div class="card">
-
-                    <i class="fa-solid fa-trophy"></i>
-
-                    <h3>Best</h3>
-
-                    <span id="best-score">--</span>
-
+                <div class="info-box">
+                    <h3>Best Score</h3>
+                    <p id="best-score">--</p>
                 </div>
 
             </div>
 
+            <!-- Difficulty -->
             <div class="difficulty">
 
                 <label for="difficulty">
-
-                    <i class="fa-solid fa-sliders"></i>
-
                     Difficulty
-
                 </label>
 
                 <select id="difficulty">
 
                     <option value="50">
-
-                        Easy (1–50)
-
+                        Easy
                     </option>
 
                     <option value="100" selected>
-
-                        Medium (1–100)
-
+                        Medium
                     </option>
 
                     <option value="500">
-
-                        Hard (1–500)
-
+                        Hard
                     </option>
 
                 </select>
 
             </div>
 
-            <div class="guess-box">
+            <!-- Guess Input -->
 
-                <input
-                    type="number"
-                    id="guess"
-                    placeholder="Enter your guess..."
-                    autocomplete="off">
+            <input
+                type="number"
+                id="guess-input"
+                placeholder="Enter your guess">
 
-            </div>
+            <!-- Guess Button -->
 
             <button id="guess-btn">
 
                 <i class="fa-solid fa-dice"></i>
 
-                Guess Number
+                Guess
 
             </button>
 
-            <div class="message">
+            <!-- Result -->
 
-                <i class="fa-solid fa-lightbulb"></i>
+            <p id="message">
+                Start guessing...
+            </p>
 
-                <span id="message">
-
-                    Your journey begins...
-
-                </span>
-
-            </div>
+            <!-- Restart -->
 
             <button id="restart-btn">
 
@@ -151,12 +102,11 @@
 
             </button>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
