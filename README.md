@@ -1,10 +1,10 @@
 # 🎯 Guess-O-Mania
 
-Guess-O-Mania is a simple web-based number guessing game built using **HTML, CSS, and JavaScript**.
+Guess-O-Mania is a web-based number guessing game built using **HTML, CSS, and JavaScript**.
 
-The player has to guess a randomly generated number within the selected difficulty level. After every guess, the game provides hints to help the player find the correct number.
+The game generates a random number based on the selected difficulty level. Players keep guessing until they find the correct number while receiving higher/lower hints after each attempt.
 
-This project is being developed phase by phase to strengthen my frontend development skills and JavaScript fundamentals.
+This project was created to strengthen my frontend development skills and practice JavaScript DOM manipulation.
 
 ---
 
@@ -12,38 +12,23 @@ This project is being developed phase by phase to strengthen my frontend develop
 
 - ✅ Phase 1 - HTML Structure
 - ✅ Phase 2 - Responsive UI Design
-- ⏳ Phase 3 - Game Logic
-- ⏳ Phase 4 - Difficulty Levels & Timer
-- ⏳ Phase 5 - Best Score using Local Storage
+- ✅ Phase 3 - Core Game Logic
+- ⏳ Phase 4 - Timer & Best Score
+- ⏳ Phase 5 - Local Storage & Final Improvements
 - ⏳ Phase 6 - Deployment & Documentation
 
 ---
 
-## ✨ Features Completed
-
-- Clean and responsive user interface
-- Attempts counter section
-- Timer section
-- Best score section
-- Difficulty selection
-- Number input field
-- Guess button
-- Play Again button
-- Mobile-friendly layout
-
----
-
-## 🚧 Upcoming Features
+## ✨ Features
 
 - Random number generation
+- Three difficulty levels
 - Higher / Lower hints
-- Attempt counter functionality
-- Timer functionality
-- Best score tracking
+- Attempt counter
+- Enter key support
 - Input validation
 - Restart game
-- Keyboard (Enter key) support
-- Local Storage integration
+- Responsive user interface
 
 ---
 
@@ -51,7 +36,7 @@ This project is being developed phase by phase to strengthen my frontend develop
 
 - HTML5
 - CSS3
-- JavaScript (Upcoming)
+- JavaScript
 - Git
 - GitHub
 
@@ -69,58 +54,41 @@ Guess-o-Matic
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
-│   └── assets/
 │
 ├── README.md
-├── LICENSE
-└── .gitignore
+└── LICENSE
 ```
 
 ---
 
-## 🎯 Project Objective
+## 🎯 Learning Outcomes
 
-This project is being built to improve my understanding of:
-
-- HTML structure
-- CSS styling
-- Responsive Web Design
-- JavaScript DOM Manipulation
+- DOM Manipulation
 - Event Handling
-- Local Storage
+- JavaScript Functions
+- Conditional Statements
+- Random Number Generation
+- Responsive Design
 - Git & GitHub
 
 ---
 
 ## 📸 Preview
 
-> Screenshots and live demo will be added after completing the project.
+Screenshots and live demo will be added after project completion.
 
 ---
 
 ## 👨‍💻 Author
 
-### Akshaykumar Santi
+**Akshaykumar Santi**
 
-**Skills**
+Computer Science & Engineering Graduate
 
-- Python
-- SQL
-- HTML
-- CSS
-- JavaScript
-- NumPy
-
-I enjoy building practical projects that improve my programming and problem-solving skills while learning modern web development.
+Passionate about Python, JavaScript, SQL, and building practical software projects.
 
 ---
 
 ## 📌 Project Status
 
-🚧 This project is currently under active development.
-
-More features and improvements will be added in the upcoming phases.
-
----
-
-### ⭐ If you like this project, consider giving it a star on GitHub.
+🚧 This project is under active development.
