@@ -33,3 +33,67 @@ function startGame() {
 
 }
 
+// -------------------------
+// Check User Guess
+// -------------------------
+
+function checkGuess() {
+
+    const userGuess = Number(guessInput.value);
+
+    if (guessInput.value === "") {
+
+        message.textContent = "Please enter a number.";
+
+        return;
+
+    }
+
+    if (userGuess < 1 || userGuess > Number(difficulty.value)) {
+
+        message.textContent = `Enter a number between 1 and ${difficulty.value}.`;
+
+        return;
+
+    }
+
+    if (userGuess < randomNumber) {
+
+        message.textContent = "⬆ Higher Number Please";
+
+    }
+
+    else if (userGuess > randomNumber) {
+
+        message.textContent = "⬇ Lower Number Please";
+
+    }
+
+    else {
+
+        message.textContent = "🎉 Correct! You guessed the number.";
+
+        guessInput.disabled = true;
+
+        guessButton.disabled = true;
+
+    }
+
+    guessInput.value = "";
+
+    guessInput.focus();
+
+}
+
+// -------------------------
+// Event Listeners
+// -------------------------
+
+guessButton.addEventListener("click", checkGuess);
+
+restartButton.addEventListener("click", startGame);
+
+difficulty.addEventListener("change", startGame);
+
+// Start the first game
+startGame();
