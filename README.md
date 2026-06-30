@@ -10,12 +10,15 @@ This project was created to strengthen my frontend development skills and practi
 
 ## 🚀 Current Progress
 
-- ✅ Phase 1 - HTML Structure
-- ✅ Phase 2 - Responsive UI Design
-- ✅ Phase 3 - Core Game Logic
-- ⏳ Phase 4 - Timer & Best Score
-- ⏳ Phase 5 - Local Storage & Final Improvements
-- ⏳ Phase 6 - Deployment & Documentation
+- ✅ HTML Structure
+- ✅ Responsive CSS
+- ✅ Random Number Generation
+- ✅ Higher / Lower Hint
+- ⏳ Attempt Counter
+- ⏳ Enter Key Support
+- ⏳ Play Again Improvements
+- ⏳ Timer
+- ⏳ Best Score
 
 ---
 
