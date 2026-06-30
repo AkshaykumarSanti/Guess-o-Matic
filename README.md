@@ -18,7 +18,7 @@ This project was created to strengthen my frontend development skills and practi
 - ⏳ Enter Key Support
 - ⏳ Play Again Improvements
 - ⏳ Timer
-- ⏳ Best Score
+- ⏳ Best Scores
 
 ---
 
