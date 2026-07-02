@@ -1,53 +1,67 @@
 # 🎯 Guess-O-Mania
 
-Guess-O-Mania is a web-based number guessing game built using **HTML, CSS and JavaScript**.
+A web-based number guessing game built using **HTML, CSS, and JavaScript**.
 
-The game generates a random number based on the selected difficulty level. Players keep guessing until they find the correct number while receiving higher/lower hints after each attempt.
-
-This project was created to strengthen my frontend development skills and practice JavaScript DOM manipulation.
+The application generates a random number based on the selected difficulty level. Players attempt to guess the correct number while receiving helpful hints after each guess. This project is being developed incrementally to practice frontend development concepts and JavaScript programming.
 
 ---
 
-## 🚀 Current Progress
+## 🚀 Project Status
 
+🚧 **Currently Under Development**
+
+### Completed
 - ✅ HTML Structure
-- ✅ Responsive CSS
+- ✅ Responsive CSS Design
 - ✅ Random Number Generation
-- ✅ Higher /Lower Hint
+- ✅ Higher / Lower Hints
 - ✅ Attempt Counter
+
+### Upcoming Features
 - ⏳ Enter Key Support
 - ⏳ Timer
-- ⏳ Best Score
-- ⏳ Message Colors
+- ⏳ Best Score (Local Storage)
+- ⏳ Color-Coded Feedback
+- ⏳ Final UI Improvements
+- ⏳ GitHub Pages Deployment
 
 ---
 
 ## ✨ Features
 
-- Random number generation
-- Three difficulty levels
-- Higher / Lower hints
-- Attempt counter
-- Enter key support
-- Input validation
-- Restart game
-- Responsive user interface
+### Current Features
+- 🎲 Random number generation
+- 📊 Attempt counter
+- 📈 Higher and Lower hints
+- 🎚️ Difficulty selection
+- 🔄 Restart game
+- 📱 Responsive design
+- ⚠️ Input validation
+
+### Planned Features
+- ⌨️ Enter key support
+- ⏱️ Live timer
+- 🏆 Best score tracking
+- 💾 Local Storage integration
+- 🎨 Dynamic feedback messages
 
 ---
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure |
+| CSS3 | Styling & Responsive Design |
+| JavaScript | Game Logic |
+| Git | Version Control |
+| GitHub | Project Hosting |
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 Guess-o-Matic
 │
 ├── python_version/
@@ -56,29 +70,44 @@ Guess-o-Matic
 ├── web_version/
 │   ├── index.html
 │   ├── style.css
-│   ├── script.js
+│   └── script.js
 │
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## 🎯 Learning Outcomes
+## 🎯 Learning Objectives
 
-- DOM Manipulation
-- Event Handling
-- JavaScript Functions
-- Conditional Statements
-- Random Number Generation
-- Responsive Design
-- Git & GitHub
+This project helps me practice:
+
+- HTML page structure
+- CSS layouts and responsive design
+- JavaScript DOM manipulation
+- Event handling
+- Conditional statements
+- Functions
+- Random number generation
+- Git and GitHub workflow
 
 ---
 
 ## 📸 Preview
 
-Screenshots and live demo will be added after project completion.
+Project screenshots will be added after completing the final version.
+
+---
+
+## 📌 Future Improvements
+
+- Add game timer
+- Save best score using Local Storage
+- Improve UI feedback with colors
+- Deploy using GitHub Pages
+- Add project screenshots
+- Improve accessibility
 
 ---
 
@@ -86,12 +115,20 @@ Screenshots and live demo will be added after project completion.
 
 **Akshaykumar Santi**
 
-Computer Science & Engineering Graduate
+Computer Science Engineering Graduate
 
-Passionate about Python, JavaScript, SQL, and building practical software projects.
+### Skills
+
+- Python
+- SQL
+- HTML5
+- CSS3
+- JavaScript
+- NumPy
+- Git & GitHub
 
 ---
 
-## 📌 Project Status
+## ⭐ Support
 
-🚧 This project is under active development.
+If you found this project helpful or interesting, consider giving it a ⭐ on GitHub.
