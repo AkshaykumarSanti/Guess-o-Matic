@@ -11,7 +11,6 @@ const message = document.getElementById("message");
 const difficulty = document.getElementById("difficulty");
 const attemptsText = document.getElementById("attempts");
 
-// Game Variables
 let randomNumber;
 let attempts;
 
