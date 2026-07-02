@@ -13,12 +13,12 @@ This project was created to strengthen my frontend development skills and practi
 - ✅ HTML Structure
 - ✅ Responsive CSS
 - ✅ Random Number Generation
-- ✅ Higher / Lower Hint
-- ⏳ Attempt Counter
+- ✅ Higher /Lower Hint
+- ✅ Attempt Counter
 - ⏳ Enter Key Support
-- ⏳ Play Again Improvements
 - ⏳ Timer
-- ⏳ Best Scores
+- ⏳ Best Score
+- ⏳ Message Colors
 
 ---
 
