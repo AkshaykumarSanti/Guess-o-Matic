@@ -1,6 +1,6 @@
 # 🎯 Guess-O-Mania
 
-A web-based number guessing game built using **HTML, CSS, and JavaScript**.
+A web-based number guessing game built using **HTML, CSS and JavaScript**.
 
 The application generates a random number based on the selected difficulty level. Players attempt to guess the correct number while receiving helpful hints after each guess. This project is being developed incrementally to practice frontend development concepts and JavaScript programming.
 
