@@ -17,6 +17,7 @@ The application generates a random number based on the selected difficulty level
 - ✅ Higher / Lower Hints
 - ✅ Attempt Counter
 - ✅ Enter Key Support
+- ✅ Play Again Functionality
 
 ### Upcoming Features
 - ⏳ Timer
