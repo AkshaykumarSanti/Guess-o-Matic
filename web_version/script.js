@@ -1,3 +1,9 @@
+// ===============================
+// Guess-O-Mania
+// Part 8 - Improve Play Again
+// ===============================
+
+// Select HTML Elements
 const guessInput = document.getElementById("guess-input");
 const guessButton = document.getElementById("guess-btn");
 const restartButton = document.getElementById("restart-btn");
@@ -27,7 +33,7 @@ function startGame() {
     guessInput.disabled = false;
     guessButton.disabled = false;
 
-    message.textContent = `Guess a number between 1 and ${maxNumber}.`;
+    message.textContent = `🎯 New Game Started! Guess a number between 1 and ${maxNumber}.`;
 
     guessInput.focus();
 
@@ -45,6 +51,7 @@ function checkGuess() {
     if (guessInput.value === "") {
 
         message.textContent = "Please enter a number.";
+        guessInput.focus();
         return;
 
     }
@@ -66,19 +73,19 @@ function checkGuess() {
         message.textContent = "⬆ Higher Number Please";
 
     }
-
     else if (userGuess > randomNumber) {
 
         message.textContent = "⬇ Lower Number Please";
 
     }
-
     else {
 
-        message.textContent = `🎉 Correct! You guessed the number in ${attempts} attempts.`;
+        message.textContent = `🎉 Congratulations! You guessed the number in ${attempts} attempts.`;
 
         guessInput.disabled = true;
         guessButton.disabled = true;
+
+        return;
 
     }
 
@@ -93,11 +100,6 @@ function checkGuess() {
 
 guessButton.addEventListener("click", checkGuess);
 
-restartButton.addEventListener("click", startGame);
-
-difficulty.addEventListener("change", startGame);
-
-// Press Enter to Guess
 guessInput.addEventListener("keydown", function(event){
 
     if(event.key === "Enter"){
@@ -108,5 +110,9 @@ guessInput.addEventListener("keydown", function(event){
 
 });
 
-// Start First Game
+restartButton.addEventListener("click", startGame);
+
+difficulty.addEventListener("change", startGame);
+
+// Start Game
 startGame();
