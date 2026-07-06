@@ -16,9 +16,9 @@ The application generates a random number based on the selected difficulty level
 - ✅ Random Number Generation
 - ✅ Higher / Lower Hints
 - ✅ Attempt Counter
+- ✅ Enter Key Support
 
 ### Upcoming Features
-- ⏳ Enter Key Support
 - ⏳ Timer
 - ⏳ Best Score (Local Storage)
 - ⏳ Color-Coded Feedback
