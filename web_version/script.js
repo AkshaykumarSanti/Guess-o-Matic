@@ -1,9 +1,3 @@
-// ===============================
-// Guess-O-Mania
-// Part 6 - Attempt Counter
-// ===============================
-
-// Select HTML Elements
 const guessInput = document.getElementById("guess-input");
 const guessButton = document.getElementById("guess-btn");
 const restartButton = document.getElementById("restart-btn");
@@ -11,6 +5,7 @@ const message = document.getElementById("message");
 const difficulty = document.getElementById("difficulty");
 const attemptsText = document.getElementById("attempts");
 
+// Game Variables
 let randomNumber;
 let attempts;
 
@@ -58,11 +53,11 @@ function checkGuess() {
 
         message.textContent = `Enter a number between 1 and ${maxNumber}.`;
         guessInput.value = "";
+        guessInput.focus();
         return;
 
     }
 
-    // Increase attempts only for valid guesses
     attempts++;
     attemptsText.textContent = attempts;
 
@@ -71,11 +66,13 @@ function checkGuess() {
         message.textContent = "⬆ Higher Number Please";
 
     }
+
     else if (userGuess > randomNumber) {
 
         message.textContent = "⬇ Lower Number Please";
 
     }
+
     else {
 
         message.textContent = `🎉 Correct! You guessed the number in ${attempts} attempts.`;
@@ -100,5 +97,16 @@ restartButton.addEventListener("click", startGame);
 
 difficulty.addEventListener("change", startGame);
 
-// Start the first game
+// Press Enter to Guess
+guessInput.addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+
+        checkGuess();
+
+    }
+
+});
+
+// Start First Game
 startGame();
