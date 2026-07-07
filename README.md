@@ -18,6 +18,7 @@ The application generates a random number based on the selected difficulty level
 - ✅ Attempt Counter
 - ✅ Enter Key Support
 - ✅ Play Again Functionality
+- ✅ Disable Guess Button for Empty Input
 
 ### Upcoming Features
 - ⏳ Timer
