@@ -1,6 +1,6 @@
 // ===============================
 // Guess-O-Mania
-// Part 8 - Improve Play Again
+// Part 9 - Disable Guess Button for Empty Input
 // ===============================
 
 // Select HTML Elements
@@ -31,7 +31,7 @@ function startGame() {
     guessInput.value = "";
 
     guessInput.disabled = false;
-    guessButton.disabled = false;
+    guessButton.disabled = true;
 
     message.textContent = `🎯 New Game Started! Guess a number between 1 and ${maxNumber}.`;
 
@@ -51,6 +51,7 @@ function checkGuess() {
     if (guessInput.value === "") {
 
         message.textContent = "Please enter a number.";
+        guessButton.disabled = true;
         guessInput.focus();
         return;
 
@@ -60,6 +61,7 @@ function checkGuess() {
 
         message.textContent = `Enter a number between 1 and ${maxNumber}.`;
         guessInput.value = "";
+        guessButton.disabled = true;
         guessInput.focus();
         return;
 
@@ -90,6 +92,7 @@ function checkGuess() {
     }
 
     guessInput.value = "";
+    guessButton.disabled = true;
     guessInput.focus();
 
 }
@@ -105,6 +108,22 @@ guessInput.addEventListener("keydown", function(event){
     if(event.key === "Enter"){
 
         checkGuess();
+
+    }
+
+});
+
+// Enable / Disable Guess Button
+guessInput.addEventListener("input", function(){
+
+    if(guessInput.value.trim() === ""){
+
+        guessButton.disabled = true;
+
+    }
+    else{
+
+        guessButton.disabled = false;
 
     }
 
