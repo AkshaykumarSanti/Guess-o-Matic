@@ -20,6 +20,7 @@ The application generates a random number based on the selected difficulty level
 - ✅ Play Again Functionality
 - ✅ Disable Guess Button for Empty Input
 - ✅ Number Only Input Validation
+- ✅ Clear Feedback Message While Typing
 
 ### Upcoming Features
 - ⏳ Timer
