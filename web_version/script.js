@@ -115,10 +115,19 @@ guessInput.addEventListener("keydown", function(event){
 
 // Enable / Disable Guess Button
 // Handle Input Changes
+// Handle Input Changes
 guessInput.addEventListener("input", function(){
 
     // Allow only numbers
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
+
+
+    // Limit input length
+    if(guessInput.value.length > 3){
+
+        guessInput.value = guessInput.value.slice(0,3);
+
+    }
 
 
     // Enable / Disable Guess Button
@@ -131,7 +140,6 @@ guessInput.addEventListener("input", function(){
 
         guessButton.disabled = false;
 
-        // Clear previous message while typing
         message.textContent = "Make your guess!";
 
     }
