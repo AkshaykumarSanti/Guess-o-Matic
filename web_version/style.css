@@ -218,6 +218,20 @@ button{
 
 }
 
+/* Game Information */
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.game-info p {
+    margin: 0;
+}
+
 /* Guess Button */
 
 #guess-btn{

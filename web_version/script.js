@@ -1,6 +1,6 @@
 // ===============================
 // Guess-O-Mania
-// Part 9 - Disable Guess Button for Empty Input
+// Part 13 - Add Timer Display
 // ===============================
 
 // Select HTML Elements
@@ -10,6 +10,7 @@ const restartButton = document.getElementById("restart-btn");
 const message = document.getElementById("message");
 const difficulty = document.getElementById("difficulty");
 const attemptsText = document.getElementById("attempts");
+const timerText = document.getElementById("timer");
 
 // Game Variables
 let randomNumber;
@@ -27,6 +28,9 @@ function startGame() {
 
     attempts = 0;
     attemptsText.textContent = attempts;
+
+    // Reset Timer Display
+    timerText.textContent = 0;
 
     guessInput.value = "";
 
@@ -113,14 +117,11 @@ guessInput.addEventListener("keydown", function(event){
 
 });
 
-// Enable / Disable Guess Button
-// Handle Input Changes
 // Handle Input Changes
 guessInput.addEventListener("input", function(){
 
     // Allow only numbers
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
-
 
     // Limit input length
     if(guessInput.value.length > 3){
@@ -128,7 +129,6 @@ guessInput.addEventListener("input", function(){
         guessInput.value = guessInput.value.slice(0,3);
 
     }
-
 
     // Enable / Disable Guess Button
     if(guessInput.value.trim() === ""){
