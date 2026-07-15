@@ -22,6 +22,7 @@ The application generates a random number based on the selected difficulty level
 - ✅ Number Only Input Validation
 - ✅ Clear Feedback Message While Typing
 - ✅ Limit Guess Input Length
+- ✅ Timer Display
 
 ### Upcoming Features
 - ⏳ Timer
