@@ -16,6 +16,9 @@ const timerText = document.getElementById("timer");
 let randomNumber;
 let attempts;
 
+let timer = 0;
+let timerInterval;
+
 // -------------------------
 // Start New Game
 // -------------------------
@@ -30,7 +33,20 @@ function startGame() {
     attemptsText.textContent = attempts;
 
     // Reset Timer Display
-    timerText.textContent = 0;
+    // Reset Timer
+    timer = 0;
+    timerText.textContent = timer;
+
+    // Clear previous timer
+    clearInterval(timerInterval);
+
+    // Start timer
+    timerInterval = setInterval(function () {
+
+        timer++;
+        timerText.textContent = timer;
+
+    }, 1000);
 
     guessInput.value = "";
 
