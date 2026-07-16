@@ -23,6 +23,7 @@ The application generates a random number based on the selected difficulty level
 - ✅ Clear Feedback Message While Typing
 - ✅ Limit Guess Input Length
 - ✅ Timer Display
+- ✅ Game Timer
 
 ### Upcoming Features
 - ⏳ Timer
