@@ -1,101 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* ===========================
+   General Styles
+=========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* Body */
-
 body{
 
     font-family:'Poppins',sans-serif;
-
-    background:#b6d5ff;
-
+    background:#dbeafe;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     min-height:100vh;
-
     padding:20px;
 
 }
 
-/* Main Container */
+/* ===========================
+   Container
+=========================== */
 
 .container{
 
     width:100%;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
 }
 
-/* Game Card */
+/* ===========================
+   Game Card
+=========================== */
 
 .game-box{
 
     width:100%;
-
     max-width:550px;
-
     background:#ffffff;
-
-    border-radius:12px;
-
-    padding:25px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
 
 }
 
-/* Heading */
+/* ===========================
+   Heading
+=========================== */
 
 .game-box h1{
 
     text-align:center;
-
     color:#2563eb;
-
     margin-bottom:12px;
-
     font-size:34px;
 
 }
 
-/* Description */
-
 .description{
 
     text-align:center;
-
     color:#555;
-
     line-height:1.6;
-
     margin-bottom:30px;
 
 }
 
-/* Statistics */
+/* ===========================
+   Statistics
+=========================== */
 
 .game-info{
 
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:15px;
-
     margin-bottom:30px;
 
 }
@@ -103,13 +88,9 @@ body{
 .info-box{
 
     background:#f8fafc;
-
     border:1px solid #e5e7eb;
-
     border-radius:10px;
-
-    padding:18px;
-
+    padding:15px;
     text-align:center;
 
 }
@@ -117,24 +98,23 @@ body{
 .info-box h3{
 
     font-size:15px;
-
     color:#555;
-
     margin-bottom:10px;
+    font-weight:500;
 
 }
 
 .info-box p{
 
+    font-size:22px;
     color:#2563eb;
-
-    font-size:24px;
-
     font-weight:600;
 
 }
 
-/* Difficulty */
+/* ===========================
+   Difficulty
+=========================== */
 
 .difficulty{
 
@@ -145,43 +125,42 @@ body{
 .difficulty label{
 
     display:block;
-
     margin-bottom:8px;
-
     font-weight:500;
+    color:#333;
 
 }
 
 .difficulty select{
 
     width:100%;
-
     padding:12px;
-
     border:1px solid #d1d5db;
-
     border-radius:8px;
-
     font-size:15px;
-
     background:white;
+    cursor:pointer;
 
 }
 
-/* Input */
+.difficulty select:focus{
+
+    outline:none;
+    border-color:#2563eb;
+
+}
+
+/* ===========================
+   Input
+=========================== */
 
 #guess-input{
 
     width:100%;
-
     padding:14px;
-
-    font-size:16px;
-
     border:1px solid #d1d5db;
-
     border-radius:8px;
-
+    font-size:16px;
     margin-bottom:20px;
 
 }
@@ -189,58 +168,33 @@ body{
 #guess-input:focus{
 
     outline:none;
-
     border-color:#2563eb;
-
-    box-shadow:0 0 5px rgba(37,99,235,.25);
+    box-shadow:0 0 6px rgba(37,99,235,.25);
 
 }
 
-/* Buttons */
+/* ===========================
+   Buttons
+=========================== */
 
 button{
 
     width:100%;
-
     padding:14px;
-
     border:none;
-
     border-radius:8px;
-
     cursor:pointer;
-
     font-size:16px;
-
     font-weight:500;
-
-    transition:0.2s;
+    transition:.25s;
 
 }
-
-/* Game Information */
-
-.game-info {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.game-info p {
-    margin: 0;
-}
-
-/* Guess Button */
 
 #guess-btn{
 
     background:#2563eb;
-
     color:white;
-
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
@@ -250,32 +204,16 @@ button{
 
 }
 
-/* Message */
+#guess-btn:disabled{
 
-#message{
-
-    background:#f8fafc;
-
-    border:1px solid #e5e7eb;
-
-    border-radius:8px;
-
-    padding:15px;
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-    color:#444;
+    background:#9ca3af;
+    cursor:not-allowed;
 
 }
-
-/* Restart Button */
 
 #restart-btn{
 
     background:#16a34a;
-
     color:white;
 
 }
@@ -286,27 +224,82 @@ button{
 
 }
 
-/* Footer */
+/* ===========================
+   Message Box
+=========================== */
+
+#message{
+
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:8px;
+    padding:15px;
+    text-align:center;
+    color:#444;
+    margin-bottom:20px;
+    min-height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* ===========================
+   Message Colors
+=========================== */
+
+.success{
+
+    color:#15803d;
+
+}
+
+.error{
+
+    color:#dc2626;
+
+}
+
+.warning{
+
+    color:#d97706;
+
+}
+
+.info{
+
+    color:#2563eb;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
 
 footer{
 
     margin-top:25px;
-
     text-align:center;
-
     color:#666;
-
     font-size:14px;
 
 }
 
-/* Responsive */
+footer strong{
+
+    color:#2563eb;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
 
 @media(max-width:600px){
 
     .game-box{
 
-        padding:25px;
+        padding:22px;
 
     }
 
@@ -319,6 +312,12 @@ footer{
     .game-box h1{
 
         font-size:28px;
+
+    }
+
+    .info-box p{
+
+        font-size:20px;
 
     }
 

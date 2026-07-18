@@ -1,6 +1,6 @@
 // ===============================
 // Guess-O-Mania
-// Part 13 - Add Timer Display
+// Day 1
 // ===============================
 
 // Select HTML Elements
@@ -11,75 +11,93 @@ const message = document.getElementById("message");
 const difficulty = document.getElementById("difficulty");
 const attemptsText = document.getElementById("attempts");
 const timerText = document.getElementById("timer");
+const bestScoreText = document.getElementById("best-score");
 
+// ===============================
 // Game Variables
+// ===============================
+
 let randomNumber;
 let attempts;
 
 let timer = 0;
 let timerInterval;
 
-// -------------------------
+// Best Score (Current Session)
+let bestScore = Infinity;
+
+// ===============================
 // Start New Game
-// -------------------------
+// ===============================
 
 function startGame() {
 
     const maxNumber = Number(difficulty.value);
 
+    // Generate Random Number
     randomNumber = Math.floor(Math.random() * maxNumber) + 1;
 
+    // Reset Attempts
     attempts = 0;
     attemptsText.textContent = attempts;
 
-    // Reset Timer Display
     // Reset Timer
     timer = 0;
-    timerText.textContent = timer;
+    timerText.textContent = `${timer} sec`;
 
-    // Clear previous timer
+    // Stop Previous Timer
     clearInterval(timerInterval);
 
-    // Start timer
+    // Start New Timer
     timerInterval = setInterval(function () {
 
         timer++;
-        timerText.textContent = timer;
+        timerText.textContent = `${timer} sec`;
 
     }, 1000);
 
+    // Reset Input
     guessInput.value = "";
 
     guessInput.disabled = false;
     guessButton.disabled = true;
 
+    // Default Message
     message.textContent = `🎯 New Game Started! Guess a number between 1 and ${maxNumber}.`;
+
+    message.className = "info";
 
     guessInput.focus();
 
 }
 
-// -------------------------
+// ===============================
 // Check User Guess
-// -------------------------
+// ===============================
 
 function checkGuess() {
 
     const userGuess = Number(guessInput.value);
     const maxNumber = Number(difficulty.value);
 
-    if (guessInput.value === "") {
+    // Empty Input
+    if (guessInput.value.trim() === "") {
 
         message.textContent = "Please enter a number.";
+        message.className = "warning";
+
         guessButton.disabled = true;
         guessInput.focus();
         return;
 
     }
 
+    // Range Validation
     if (userGuess < 1 || userGuess > maxNumber) {
 
         message.textContent = `Enter a number between 1 and ${maxNumber}.`;
+        message.className = "error";
+
         guessInput.value = "";
         guessButton.disabled = true;
         guessInput.focus();
@@ -87,22 +105,44 @@ function checkGuess() {
 
     }
 
+    // Count Attempt
     attempts++;
     attemptsText.textContent = attempts;
 
+    // Guess Too Low
     if (userGuess < randomNumber) {
 
         message.textContent = "⬆ Higher Number Please";
+        message.className = "warning";
 
     }
+
+    // Guess Too High
     else if (userGuess > randomNumber) {
 
         message.textContent = "⬇ Lower Number Please";
+        message.className = "warning";
 
     }
+
+    // Correct Guess
     else {
 
-        message.textContent = `🎉 Congratulations! You guessed the number in ${attempts} attempts.`;
+        // Stop Timer
+        clearInterval(timerInterval);
+
+        // Update Best Score
+        if (attempts < bestScore) {
+
+            bestScore = attempts;
+            bestScoreText.textContent = bestScore;
+
+        }
+
+        message.textContent =
+            `🎉 Congratulations! You guessed the number in ${attempts} attempts and ${timer} seconds.`;
+
+        message.className = "success";
 
         guessInput.disabled = true;
         guessButton.disabled = true;
@@ -111,6 +151,7 @@ function checkGuess() {
 
     }
 
+        // Prepare for next guess
     guessInput.value = "";
     guessButton.disabled = true;
     guessInput.focus();
@@ -121,11 +162,13 @@ function checkGuess() {
 // Event Listeners
 // -------------------------
 
+// Guess Button
 guessButton.addEventListener("click", checkGuess);
 
-guessInput.addEventListener("keydown", function(event){
+// Press Enter
+guessInput.addEventListener("keydown", function (event) {
 
-    if(event.key === "Enter"){
+    if (event.key === "Enter" && !guessButton.disabled) {
 
         checkGuess();
 
@@ -133,38 +176,52 @@ guessInput.addEventListener("keydown", function(event){
 
 });
 
-// Handle Input Changes
-guessInput.addEventListener("input", function(){
+// Handle Input
+guessInput.addEventListener("input", function () {
 
     // Allow only numbers
     guessInput.value = guessInput.value.replace(/[^0-9]/g, "");
 
-    // Limit input length
-    if(guessInput.value.length > 3){
+    // Maximum 3 digits
+    if (guessInput.value.length > 3) {
 
-        guessInput.value = guessInput.value.slice(0,3);
+        guessInput.value = guessInput.value.slice(0, 3);
 
     }
 
     // Enable / Disable Guess Button
-    if(guessInput.value.trim() === ""){
+    if (guessInput.value.trim() === "") {
 
         guessButton.disabled = true;
 
     }
-    else{
+    else {
 
         guessButton.disabled = false;
 
-        message.textContent = "Make your guess!";
+        message.textContent = "💡 Make your guess!";
+        message.className = "info";
 
     }
 
 });
 
-restartButton.addEventListener("click", startGame);
+// Restart Game
+restartButton.addEventListener("click", function () {
 
-difficulty.addEventListener("change", startGame);
+    startGame();
 
+});
+
+// Change Difficulty
+difficulty.addEventListener("change", function () {
+
+    startGame();
+
+});
+
+// ===============================
 // Start Game
+// ===============================
+
 startGame();

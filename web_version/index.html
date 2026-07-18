@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Guess-O-Mania</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -23,51 +27,67 @@
         <div class="game-box">
 
             <!-- Heading -->
-            <h1><i class="fa-solid fa-bullseye"></i> Guess-O-Mania</h1>
+
+            <h1>
+                <i class="fa-solid fa-bullseye"></i>
+                Guess-O-Mania
+            </h1>
 
             <p class="description">
-                Can you find the hidden number? Select a difficulty and start guessing!
+                Guess the hidden number before the timer beats you.
+                Choose a difficulty level and start playing.
             </p>
 
-            <!-- Game Information -->
+            <!-- Game Statistics -->
+
             <div class="game-info">
 
-                <div class="game-info">
-                    <p>Attempts: <span id="attempts">0</span></p>
-                    <p>Time: <span id="timer">0</span> sec</p>
+                <div class="info-box">
+
+                    <h3>Attempts</h3>
+
+                    <p id="attempts">0</p>
+
                 </div>
 
                 <div class="info-box">
+
                     <h3>Best Score</h3>
+
                     <p id="best-score">--</p>
+
                 </div>
 
                 <div class="info-box">
+
                     <h3>Timer</h3>
-                    <p id="timer">00:00</p>
+
+                    <p id="timer">0 sec</p>
+
                 </div>
 
             </div>
 
             <!-- Difficulty -->
+
             <div class="difficulty">
 
                 <label for="difficulty">
-                    Difficulty
+                    Select Difficulty
                 </label>
 
                 <select id="difficulty">
 
                     <option value="50">
-                        Easy
+                        Easy (1 - 50)
                     </option>
 
                     <option value="100" selected>
-                        Medium
+                        Medium (1 - 100)
                     </option>
 
                     <option value="500">
-                        Hard
+                        Hard (1 - 500)
                     </option>
 
                 </select>
@@ -76,11 +96,10 @@
 
             <!-- Guess Input -->
 
-            <input 
-                type="number" 
+            <input
+                type="number"
                 id="guess-input"
-                maxlength="3"
-            >
+                placeholder="Enter your guess">
 
             <!-- Guess Button -->
 
@@ -88,14 +107,16 @@
 
                 <i class="fa-solid fa-dice"></i>
 
-                Guess
+                Guess Number
 
             </button>
 
-            <!-- Result -->
+            <!-- Result Message -->
 
             <p id="message">
-                💡 Enter a number and click "Guess" to begin.
+
+                💡 Enter a number to start playing.
+
             </p>
 
             <!-- Restart -->
@@ -108,6 +129,14 @@
 
             </button>
 
+            <!-- Footer -->
+
+            <footer>
+
+                Developed by <strong>Akshaykumar Santi</strong>
+
+            </footer>
+
         </div>
 
     </div>
@@ -115,4 +144,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
