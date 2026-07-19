@@ -25,6 +25,15 @@ let timerInterval;
 
 // Best Score (Current Session)
 let bestScore = Infinity;
+// Load Best Score from Local Storage
+const savedBestScore = localStorage.getItem("bestScore");
+
+if (savedBestScore !== null) {
+
+    bestScore = Number(savedBestScore);
+    bestScoreText.textContent = bestScore;
+
+}
 
 // ===============================
 // Start New Game
@@ -135,7 +144,10 @@ function checkGuess() {
         if (attempts < bestScore) {
 
             bestScore = attempts;
+
             bestScoreText.textContent = bestScore;
+
+            localStorage.setItem("bestScore", bestScore);
 
         }
 
