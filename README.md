@@ -10,20 +10,18 @@ The application generates a random number based on the selected difficulty level
 
 🚧 **Currently Under Development**
 
-### Completed
-- ✅ HTML Structure
-- ✅ Responsive CSS Design
+### Completed Features
+
 - ✅ Random Number Generation
+- ✅ Difficulty Levels
 - ✅ Higher / Lower Hints
 - ✅ Attempt Counter
+- ✅ Timer
+- ✅ Best Score
+- ✅ Best Score Persistence (Local Storage)
+- ✅ Restart Game
 - ✅ Enter Key Support
-- ✅ Play Again Functionality
-- ✅ Disable Guess Button for Empty Input
-- ✅ Number Only Input Validation
-- ✅ Clear Feedback Message While Typing
-- ✅ Limit Guess Input Length
-- ✅ Timer Display
-- ✅ Game Timer
+- ✅ Input Validation
 
 ### Upcoming Features
 - ⏳ Timer
