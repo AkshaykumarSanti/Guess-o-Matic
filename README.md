@@ -22,6 +22,10 @@ The application generates a random number based on the selected difficulty level
 - ✅ Restart Game
 - ✅ Enter Key Support
 - ✅ Input Validation
+- Game Statistics
+- Games Played Counter
+- Games Won Counter
+- Win Percentage
 
 ### Upcoming Features
 - ⏳ Timer
