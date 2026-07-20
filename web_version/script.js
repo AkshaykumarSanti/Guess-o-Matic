@@ -12,6 +12,9 @@ const difficulty = document.getElementById("difficulty");
 const attemptsText = document.getElementById("attempts");
 const timerText = document.getElementById("timer");
 const bestScoreText = document.getElementById("best-score");
+const gamesPlayedText = document.getElementById("games-played");
+const gamesWonText = document.getElementById("games-won");
+const winRateText = document.getElementById("win-rate");
 
 // ===============================
 // Game Variables
@@ -22,6 +25,9 @@ let attempts;
 
 let timer = 0;
 let timerInterval;
+
+let gamesPlayed = 0;
+let gamesWon = 0;
 
 // Best Score (Current Session)
 let bestScore = Infinity;
@@ -40,6 +46,16 @@ if (savedBestScore !== null) {
 // ===============================
 
 function startGame() {
+
+    gamesPlayed++;
+
+    gamesPlayedText.textContent = gamesPlayed;
+
+    const winRate = gamesPlayed === 0
+        ? 0
+        : Math.round((gamesWon / gamesPlayed) * 100);
+
+    winRateText.textContent = `${winRate}%`;
 
     const maxNumber = Number(difficulty.value);
 
@@ -141,6 +157,14 @@ function checkGuess() {
         clearInterval(timerInterval);
 
         // Update Best Score
+        gamesWon++;
+
+        gamesWonText.textContent = gamesWon;
+
+        const winRate = Math.round((gamesWon / gamesPlayed) * 100);
+
+        winRateText.textContent = `${winRate}%`;
+        
         if (attempts < bestScore) {
 
             bestScore = attempts;
