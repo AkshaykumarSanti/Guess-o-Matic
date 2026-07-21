@@ -4,6 +4,7 @@
 // ===============================
 
 // Select HTML Elements
+const rangeText = document.getElementById("range-text");
 const guessInput = document.getElementById("guess-input");
 const guessButton = document.getElementById("guess-btn");
 const restartButton = document.getElementById("restart-btn");
@@ -58,6 +59,7 @@ function startGame() {
     winRateText.textContent = `${winRate}%`;
 
     const maxNumber = Number(difficulty.value);
+    rangeText.innerHTML = `Guess a number between <strong>1</strong> and <strong>${maxNumber}</strong>.`;
 
     // Generate Random Number
     randomNumber = Math.floor(Math.random() * maxNumber) + 1;
@@ -86,6 +88,7 @@ function startGame() {
 
     guessInput.disabled = false;
     guessButton.disabled = true;
+    difficulty.disabled = true;
 
     // Default Message
     message.textContent = `🎯 New Game Started! Guess a number between 1 and ${maxNumber}.`;
@@ -175,13 +178,27 @@ function checkGuess() {
 
         }
 
-        message.textContent =
-            `🎉 Congratulations! You guessed the number in ${attempts} attempts and ${timer} seconds.`;
+        const level =
+            difficulty.value === "50"
+                ? "Easy"
+                : difficulty.value === "100"
+                ? "Medium"
+                : "Hard";
+
+        message.innerHTML = `
+        🎉 <strong>Congratulations!</strong><br><br>
+        ✅ Number: <strong>${randomNumber}</strong><br>
+        🎯 Attempts: <strong>${attempts}</strong><br>
+        ⏱ Time: <strong>${timer} sec</strong><br>
+        🏆 Difficulty: <strong>${level}</strong><br>
+        ⭐ Best Score: <strong>${bestScore}</strong>
+        `;
 
         message.className = "success";
 
         guessInput.disabled = true;
         guessButton.disabled = true;
+        difficulty.disabled = false;
 
         return;
 
