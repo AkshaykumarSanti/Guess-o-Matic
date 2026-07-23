@@ -90,7 +90,7 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 ## 🎯 Gameplay
 
 <p align="center">
-<img src="Screenshots/gameplay.png" width="900">
+<img src="Screenshots/play.png" width="900">
 </p>
 
 ---
@@ -237,11 +237,6 @@ Currently improving Data Structures & Algorithms while building real-world softw
 
 ---
 
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 <p align="center">
 
