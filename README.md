@@ -1,143 +1,251 @@
 # 🎯 Guess-O-Mania
 
-A web-based number guessing game built using **HTML, CSS and JavaScript**.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</p>
 
-The application generates a random number based on the selected difficulty level. Players attempt to guess the correct number while receiving helpful hints after each guess. This project is being developed incrementally to practice frontend development concepts and JavaScript programming.
+<h3 align="center">
+🎲 Guess Smart • Think Fast • Beat Your Best Score
+</h3>
+
+<p align="center">
+Guess-O-Mania is an interactive browser-based number guessing game developed using HTML, CSS, and JavaScript. Players choose a difficulty level and try to guess a randomly generated number with the help of higher/lower hints. The project demonstrates JavaScript DOM manipulation, event handling, timers, local storage, and responsive web design through a clean and engaging user interface.
+</p>
 
 ---
 
-## 🚀 Project Status
+# 📚 Table of Contents
 
-🚧 **Currently Under Development**
+- Features
+- Tech Stack
+- Technical Highlights
+- Project Preview
+- Game Workflow
+- Project Structure
+- Installation
+- Future Enhancements
+- Learning Outcomes
+- About the Developer
+- License
 
-### Completed Features
+---
 
-- ✅ Random Number Generation
-- ✅ Difficulty Levels
-- ✅ Higher / Lower Hints
-- ✅ Attempt Counter
-- ✅ Timer
-- ✅ Best Score
-- ✅ Best Score Persistence (Local Storage)
-- ✅ Restart Game
-- ✅ Enter Key Support
+# 📌 Features
+
+- 🎯 Random Number Generation
+- 🎚️ Multiple Difficulty Levels
+- ⬆️ Higher / Lower Hints
+- 🔢 Attempt Counter
+- ⏱️ Live Timer
+- 🏆 Best Score Tracking
+- 📊 Games Played & Games Won Statistics
+- 📈 Win Rate Calculation
+- 💾 Best Score Saved using Local Storage
+- ⌨️ Enter Key Support
 - ✅ Input Validation
-- Game Statistics
-- Games Played Counter
-- Games Won Counter
-- Win Percentage
-
-### Upcoming Features
-- ⏳ Timer
-- ⏳ Best Score (Local Storage)
-- ⏳ Color-Coded Feedback
-- ⏳ Final UI Improvements
-- ⏳ GitHub Pages Deployment
+- 🔄 Restart Game
+- 📱 Responsive User Interface
 
 ---
 
-## ✨ Features
+# 🛠️ Tech Stack
 
-### Current Features
-- 🎲 Random number generation
-- 📊 Attempt counter
-- 📈 Higher and Lower hints
-- 🎚️ Difficulty selection
-- 🔄 Restart game
-- 📱 Responsive design
-- ⚠️ Input validation
-
-### Planned Features
-- ⌨️ Enter key support
-- ⏱️ Live timer
-- 🏆 Best score tracking
-- 💾 Local Storage integration
-- 🎨 Dynamic feedback messages
+| Category | Technologies |
+|----------|--------------|
+| Frontend | HTML5, CSS3, JavaScript |
+| Storage | Browser Local Storage |
+| Version Control | Git & GitHub |
 
 ---
 
-## 🛠️ Technologies Used
+# 🚀 Technical Highlights
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Structure |
-| CSS3 | Styling & Responsive Design |
-| JavaScript | Game Logic |
-| Git | Version Control |
-| GitHub | Project Hosting |
+- JavaScript DOM Manipulation
+- Event Handling
+- Random Number Generation
+- Conditional Logic
+- Input Validation
+- Timer using `setInterval()`
+- Local Storage Integration
+- Dynamic UI Updates
+- Responsive Web Design
 
 ---
 
-## 📂 Project Structure
+# 📸 Project Preview
+
+## 🎮 Home Screen
+
+<p align="center">
+<img src="Screenshots/home.png" width="900">
+</p>
+
+---
+
+## 🎯 Gameplay
+
+<p align="center">
+<img src="Screenshots/gameplay.png" width="900">
+</p>
+
+---
+
+## 🏆 Winning Screen
+
+<p align="center">
+<img src="Screenshots/win.png" width="900">
+</p>
+
+> **Note:** Replace the screenshot filenames with your actual image names after adding them to the `Screenshots` folder.
+
+---
+
+# 🔄 Game Workflow
 
 ```text
-Guess-o-Matic
-│
-├── python_version/
-│   └── main.py
-│
-├── web_version/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── README.md
-├── LICENSE
-└── .gitignore
+Start Game
+      │
+      ▼
+Select Difficulty
+      │
+      ▼
+Generate Random Number
+      │
+      ▼
+Enter Guess
+      │
+      ▼
+Check Guess
+      │
+      ├──────────────┐
+      ▼              ▼
+Too Low          Too High
+      │              │
+      └──────┬───────┘
+             ▼
+Guess Again
+             │
+             ▼
+Correct Guess
+             │
+             ▼
+Show Attempts, Timer & Best Score
+             │
+             ▼
+Play Again
 ```
 
 ---
 
-## 🎯 Learning Objectives
+# 📂 Project Structure
 
-This project helps me practice:
-
-- HTML page structure
-- CSS layouts and responsive design
-- JavaScript DOM manipulation
-- Event handling
-- Conditional statements
-- Functions
-- Random number generation
-- Git and GitHub workflow
-
----
-
-## 📸 Preview
-
-Project screenshots will be added after completing the final version.
+```text
+Guess-O-Mania/
+│
+├── index.html
+├── style.css
+├── script.js
+├── Screenshots/
+├── README.md
+└── LICENSE
+```
 
 ---
 
-## 📌 Future Improvements
+# ⚙️ Installation
 
-- Add game timer
-- Save best score using Local Storage
-- Improve UI feedback with colors
-- Deploy using GitHub Pages
-- Add project screenshots
-- Improve accessibility
+Clone the repository
+
+```bash
+git clone https://github.com/AkshaykumarSanti/Guess-o-Matic.git
+```
+
+Move into the project directory
+
+```bash
+cd Guess-o-Matic
+```
+
+Open the project
+
+```text
+Open index.html in your browser
+```
+
+Or use the VS Code Live Server extension for a better development experience.
 
 ---
 
-## 👨‍💻 Author
+# 🚀 Future Enhancements
 
-**Akshaykumar Santi**
+- 🌙 Dark Mode
+- 🔊 Sound Effects
+- 🎖️ Achievement System
+- 🌐 Online Leaderboard
+- 🎨 Theme Selection
+- 📱 Progressive Web App (PWA)
+- 🎵 Background Music
+- 🧠 Hint System
 
-Computer Science Engineering Graduate
+---
 
-### Skills
+# 📚 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- HTML5 Semantic Structure
+- CSS3 Responsive Design
+- JavaScript Fundamentals
+- DOM Manipulation
+- Event Handling
+- Conditional Statements
+- Random Number Generation
+- Timers using `setInterval()`
+- Browser Local Storage
+- Input Validation
+- Git & GitHub Version Control
+
+---
+
+# 👨‍💻 About the Developer
+
+## Akshaykumar Santi
+
+🎓 Bachelor of Engineering (Computer Science & Engineering)
+
+🎯 CGPA: **9.15**
+
+💻 Aspiring Software Developer passionate about Python, Django, JavaScript, SQL, and Full-Stack Web Development.
+
+### Technical Skills
 
 - Python
+- Django
+- JavaScript
 - SQL
 - HTML5
 - CSS3
-- JavaScript
-- NumPy
-- Git & GitHub
+- Git
+- GitHub
+
+Currently improving Data Structures & Algorithms while building real-world software projects.
 
 ---
 
-## ⭐ Support
+# 📄 License
 
-If you found this project helpful or interesting, consider giving it a ⭐ on GitHub.
+This project is licensed under the MIT License.
+
+---
+
+<p align="center">
+
+⭐ If you found this project useful, consider giving it a Star.
+
+Made with ❤️ using HTML, CSS & JavaScript.
+
+</p>
