@@ -82,7 +82,7 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 ## 🎮 Home Screen
 
 <p align="center">
-<img src="Screenshots/home.png" width="900">
+<img src="home.png" width="900">
 </p>
 
 ---
@@ -90,7 +90,7 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 ## 🎯 Gameplay
 
 <p align="center">
-<img src="Screenshots/play.png" width="900">
+<img src="play.png" width="900">
 </p>
 
 ---
@@ -98,7 +98,7 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 ## 🏆 Winning Screen
 
 <p align="center">
-<img src="Screenshots/win.png" width="900">
+<img src="win.png" width="900">
 </p>
 
 > **Note:** Replace the screenshot filenames with your actual image names after adding them to the `Screenshots` folder.
