@@ -11,11 +11,8 @@ const restartButton = document.getElementById("restart-btn");
 const message = document.getElementById("message");
 const difficulty = document.getElementById("difficulty");
 const attemptsText = document.getElementById("attempts");
-const timerText = document.getElementById("timer");
-const bestScoreText = document.getElementById("best-score");
 const gamesPlayedText = document.getElementById("games-played");
 const gamesWonText = document.getElementById("games-won");
-const winRateText = document.getElementById("win-rate");
 
 // ===============================
 // Game Variables
@@ -24,75 +21,55 @@ const winRateText = document.getElementById("win-rate");
 let randomNumber;
 let attempts;
 
-let timer = 0;
-let timerInterval;
-
 let gamesPlayed = 0;
 let gamesWon = 0;
-
-// Best Score (Current Session)
-let bestScore = Infinity;
-// Load Best Score from Local Storage
-const savedBestScore = localStorage.getItem("bestScore");
-
-if (savedBestScore !== null) {
-
-    bestScore = Number(savedBestScore);
-    bestScoreText.textContent = bestScore;
-
-}
 
 // ===============================
 // Start New Game
 // ===============================
 
-function startGame() {
-
-    gamesPlayed++;
+function initializeGame() {
 
     gamesPlayedText.textContent = gamesPlayed;
-
-    const winRate = gamesPlayed === 0
-        ? 0
-        : Math.round((gamesWon / gamesPlayed) * 100);
-
-    winRateText.textContent = `${winRate}%`;
+    gamesWonText.textContent = gamesWon;
 
     const maxNumber = Number(difficulty.value);
     rangeText.innerHTML = `Guess a number between <strong>1</strong> and <strong>${maxNumber}</strong>.`;
 
-    // Generate Random Number
-    randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+    randomNumber = null;
 
-    // Reset Attempts
     attempts = 0;
     attemptsText.textContent = attempts;
 
-    // Reset Timer
-    timer = 0;
-    timerText.textContent = `${timer} sec`;
-
-    // Stop Previous Timer
-    clearInterval(timerInterval);
-
-    // Start New Timer
-    timerInterval = setInterval(function () {
-
-        timer++;
-        timerText.textContent = `${timer} sec`;
-
-    }, 1000);
-
-    // Reset Input
     guessInput.value = "";
+    guessInput.disabled = false;
+    guessButton.disabled = true;
+    difficulty.disabled = false;
 
+    message.textContent = `🎯 Select a difficulty and enter a number to start playing.`;
+    message.className = "info";
+
+}
+
+function startGame() {
+
+    gamesPlayed++;
+    gamesPlayedText.textContent = gamesPlayed;
+
+    const maxNumber = Number(difficulty.value);
+    rangeText.innerHTML = `Guess a number between <strong>1</strong> and <strong>${maxNumber}</strong>.`;
+
+    randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+
+    attempts = 0;
+    attemptsText.textContent = attempts;
+
+    guessInput.value = "";
     guessInput.disabled = false;
     guessButton.disabled = true;
     difficulty.disabled = true;
 
-    // Default Message
     message.textContent = `🎯 New Game Started! Guess a number between 1 and ${maxNumber}.`;
-
     message.className = "info";
 
     guessInput.focus();
@@ -156,27 +133,10 @@ function checkGuess() {
     // Correct Guess
     else {
 
-        // Stop Timer
-        clearInterval(timerInterval);
-
-        // Update Best Score
+        // Update game counters
         gamesWon++;
 
         gamesWonText.textContent = gamesWon;
-
-        const winRate = Math.round((gamesWon / gamesPlayed) * 100);
-
-        winRateText.textContent = `${winRate}%`;
-        
-        if (attempts < bestScore) {
-
-            bestScore = attempts;
-
-            bestScoreText.textContent = bestScore;
-
-            localStorage.setItem("bestScore", bestScore);
-
-        }
 
         const level =
             difficulty.value === "50"
@@ -189,9 +149,7 @@ function checkGuess() {
         🎉 <strong>Congratulations!</strong><br><br>
         ✅ Number: <strong>${randomNumber}</strong><br>
         🎯 Attempts: <strong>${attempts}</strong><br>
-        ⏱ Time: <strong>${timer} sec</strong><br>
-        🏆 Difficulty: <strong>${level}</strong><br>
-        ⭐ Best Score: <strong>${bestScore}</strong>
+        🏆 Difficulty: <strong>${level}</strong>
         `;
 
         message.className = "success";
@@ -274,7 +232,7 @@ difficulty.addEventListener("change", function () {
 });
 
 // ===============================
-// Start Game
+// Initialize Page
 // ===============================
 
-startGame();
+initializeGame();

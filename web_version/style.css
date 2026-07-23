@@ -13,12 +13,23 @@
 body{
 
     font-family:'Poppins',sans-serif;
-    background:#dbeafe;
+    background: url("assets/background.jpeg") center/cover fixed no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     min-height:100vh;
-    padding:20px;
+    padding:12px;
+
+}
+
+.game-box{
+
+    width:100%;
+    max-width:550px;
+    background: rgba(255,255,255,0.92);
+    border-radius:15px;
+    padding:24px;
+    box-shadow:0 20px 45px rgba(15,23,42,0.18);
 
 }
 
@@ -29,6 +40,7 @@ body{
 .container{
 
     width:100%;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -45,7 +57,7 @@ body{
     max-width:550px;
     background:#ffffff;
     border-radius:15px;
-    padding:30px;
+    padding:24px;
     box-shadow:0 12px 30px rgba(0,0,0,.12);
 
 }
@@ -238,9 +250,10 @@ button{
     color:#444;
     margin-bottom:20px;
     min-height:55px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display:block;
+    white-space:normal;
+    word-wrap:break-word;
+    word-break:break-word;
 
 }
 
