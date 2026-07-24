@@ -31,7 +31,6 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 - Future Enhancements
 - Learning Outcomes
 - About the Developer
-- License
 
 ---
 
@@ -70,7 +69,6 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 - Random Number Generation
 - Conditional Logic
 - Input Validation
-- Timer using `setInterval()`
 - Local Storage Integration
 - Dynamic UI Updates
 - Responsive Web Design
@@ -100,8 +98,6 @@ Guess-O-Mania is an interactive browser-based number guessing game developed usi
 <p align="center">
 <img src="win.png" width="900">
 </p>
-
-> **Note:** Replace the screenshot filenames with your actual image names after adding them to the `Screenshots` folder.
 
 ---
 
@@ -134,7 +130,7 @@ Guess Again
 Correct Guess
              │
              ▼
-Show Attempts, Timer & Best Score
+Show Attempts & Best Score
              │
              ▼
 Play Again
@@ -184,12 +180,10 @@ Or use the VS Code Live Server extension for a better development experience.
 # 🚀 Future Enhancements
 
 - 🌙 Dark Mode
-- 🔊 Sound Effects
 - 🎖️ Achievement System
 - 🌐 Online Leaderboard
 - 🎨 Theme Selection
 - 📱 Progressive Web App (PWA)
-- 🎵 Background Music
 - 🧠 Hint System
 
 ---
@@ -205,7 +199,6 @@ Through this project, I gained practical experience in:
 - Event Handling
 - Conditional Statements
 - Random Number Generation
-- Timers using `setInterval()`
 - Browser Local Storage
 - Input Validation
 - Git & GitHub Version Control
