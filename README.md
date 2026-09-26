@@ -209,7 +209,7 @@ Through this project, I gained practical experience in:
 
 🎓 Bachelor of Engineering (Computer Science & Engineering)
 
-🎯 CGPA: **9.15**
+🎯 CGPA: **9.13**
 
 💻 Aspiring Software Developer passionate about Python, Django, JavaScript, SQL, and Full-Stack Web Development.
 
